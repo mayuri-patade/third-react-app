@@ -1,21 +1,28 @@
-
-
-// User Defined Tag: <App />
 function App() {
   return (
     <>
       <h1>Counter App</h1>
-      <CounterApp/>
+      <CounterApp />
     </>
   );
 }
 
+// UserDefineTag
 function CounterApp() {
+
+let counter = 100;
+  // Member function :: Optional
+  let likeMeAction = () => {
+    console.log("I m button click");
+  };
+
+
+  // JSX :: VIEW :: USER-INTERFACE :: Required
   return (
-  <>
-  <h1>1</h1>
-<input type="button" value="LikeMe"/>
-  </>
+    <>
+      <input type="button" value="Like Me" onClick={likeMeAction} />
+    </>
   );
 }
+
 export default App;
