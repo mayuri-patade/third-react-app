@@ -10,16 +10,18 @@ function App() {
 // UserDefineTag
 function CounterApp() {
 
-let counter = 100;
+let counter = 1;
   // Member function :: Optional
   let likeMeAction = () => {
-    console.log("I m button click");
+    counter = counter + 1;
+    console.log("I m button click",counter);
   };
 
 
   // JSX :: VIEW :: USER-INTERFACE :: Required
   return (
     <>
+    <h1>{counter}</h1>
       <input type="button" value="Like Me" onClick={likeMeAction} />
     </>
   );
